@@ -523,7 +523,7 @@ textarea.form-control {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     margin-bottom: 1rem;
 }
 
@@ -590,7 +590,7 @@ textarea.form-control {
     }
 
     .hamburger.active div:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
+        transform: rotate(-45deg) translate(-5px, 6px); 
     }
 
     .hamburger.active div:nth-child(2) {
