@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <title>Lucky Nakade Portfolio</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="logo">Lucky Nakade</a>
+        <div class="nav-links">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#projects">PROJECTS</a>
+            <a href="#contact">CONTACT</a>
+            <a href="./Resume.html">RESUME</a>
+        </div>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+    <!-- Navigation section ending -->
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Hi, I'm <span>Lucky Nakade</span></h1>
+            <h2 class="hero-subtitle">Student & Aspiring Developer</h2>
+            <p class="hero-desc">I'm passionate about creating meaningful digital experiences through innovative
+                solutions and clean code.
+            </p>
+            <div class="social-links">
+                <a href="https://join.skype.com/invite/qFXuilrCltAf" class="social-link"><i
+                        class="fa-brands fa-skype"></i></a>
+                <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit"
+                    class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/LuckyFullStackDeveloper1/LuckyFullStackDeveloper1" class="social-link"><i
+                        class="fa-brands fa-github"></i></a>
+                <a href="./Resume.html" class="social-link"><i class="fa-solid fa-circle-user"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- Hero section end -->
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="./Assets/Images/luckyy.JPEG" alt="Lucky Nakade">
+                </div>
+                <div class="about-text">
+                    <h3>Student & Technology Enthusiast</h3>
+                    <p>
+                        I am a passionate student with a keen interest in technology and innovation. Currently pursuing
+                        my degree in Computer Science, I am dedicated to expanding my knowledge and skills in various
+                        programming languages and development frameworks.
+                    </p>
+                    <p>
+                        My journey in technology began with a curiosity about how digital solutions can solve real-world
+                        problems. This curiosity has evolved into a passion for creating clean, efficient, and
+                        user-friendly applications.
+                    </p>
+                    <p>
+                        When I'm not coding or learning new technologies, you can find me exploring the latest industry
+                        trends, participating in hackathons, or collaborating on interesting projects with fellow
+                        students.
+                    </p>
+                    <a href="./Resume.html" class="hero-btn">See Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Projects</h2>
+            </div>
+
+            <div class="project-categories">
+                <button class="category-btn active" data-filter="all">All</button>
+                <button class="category-btn" data-filter="html-css">HTML / CSS</button>
+                <button class="category-btn" data-filter="javascript">JAVASCRIPT</button>
+                <button class="category-btn" data-filter="live-project">LIVE PROJECT</button>
+
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="html-css">
+                    <div class="project-img">
+                        <img src="./Assets/Images/coding.avif" alt="">
+                        <div class="project-category html-css">HTML / CSS</div>
+                        <div class="project-overlay">
+                            <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/parent_chass.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Chess-Project</h3>
+                        <p>A classic two-player chess game with smooth gameplay and clean design.</p>
+                        <p style="    color: #00a49f;">Using : Table Tags</p>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="html-css responsive">
+                    <div class="project-img">
+                        <img src="./Assets/Images/coding.avif" alt="">
+
+                        <div class="project-category html-css">HTML / CSS</div>
+                        <div class="project-overlay">
+                            <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/parent_form.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>FORM</h3>
+                        <p>Effortless data collection with our custom-built online form.
+                        <p style="  color: #00a49f;">Using : Input and Label Tags</p>
+                        <div class="project-tags"></div>
+                    </div>
+                </div>
+                <div class="project-card" data-category="Html">
+                    <div class="project-img">
+                        <img src="./Assets/Images/coding.avif" alt="">
+                        <div class="project-category html-css">HTML </div>
+                        <div class="project-overlay">
+                            <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/student_details.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>STUDENT DETAILS</h3>
+                        <p>Effortless data collection with our custom-built online form.
+                        <p style="color: #00a49f;">Using : Fieldset Tags</p>
+                        </p>
+                    </div>
+                </div>
+                <div class="project-card" data-category="html-css">
+                    <div class="project-img">
+                        <img src="./Assets/Images/coding.avif" alt="">
+                        <div class="project-category html-css">HTML / CSS </div>
+                        <div class="project-overlay">
+                            <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/newyoutube.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>YOUTUBE</h3>
+                        <p>A mini YouTube clone for browsing, searching, and playing videos online.
+                        <p style="  color: #00a49f;">Using : Table and Iframe Tags </p>
+                        </p>
+                    </div>
+                </div>
+                <!-- HTML -->
+                <!-- One -->
+               
+
+                <!-- Project 4 (Initially hidden) -->
+                <div class="project-card hidden" data-category="html-css">
+                    <div class="project-img">
+                        <img src="./Assets/Images/coding.avif" alt="">
+                        <div class="project-category html-css">HTML / CSS</div>
+                        <div class="project-overlay">
+                            <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/flags.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>FLAGS</h3>
+                        <p>The Flags project is an interactive showcase of national flags with a clean and engaging
+                            design.
+                        <p style="  color: #00a49f;">Using : Div and Image Tags </p>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Project 5 (Initially hidden) -->
+                <div class="project-card hidden" data-category="html-css responsive">
+                    <div class="project-img">
+                        <img src="./Assets/Images/coding.avif" alt="">
+                        <div class="project-category html-css">HTML / CSS</div>
+                        <div class="project-overlay">
+                            <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/luckyy.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>CONTAINER</h3>
+                        <p>The Container project is a sleek, responsive layout tool for organizing and displaying
+                            content seamlessly.
+                        <p style="  color: #00a49f;">Using : Div , Image and P Tags </p>
+                        </p>
+                    </div>
+                </div>
+                <!--  javaScript  -->
+                <!-- ONE javascript -->
+                <div class="project-card" data-category="javascript">
+                    <div class="project-img">
+                        <img src="./Assets/Images/coding.avif" alt="">
+                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
+                        <div class="project-overlay">
+                            <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/kbc.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>KBC</h3>
+                        <p>A quiz-based game inspired by KBC to test knowledge and win virtual rewards.
+                        <p style="  color: #00a49f;">Using JS Language: Script and button Tags </p>
+                        </p>
+                    </div>
+                </div>
+                <!-- TWO javascript -->
+                <div class="project-card hidden" data-category="javascript">
+                    <div class="project-img">
+                        <img src="./Assets/Images/coding.avif" alt="">
+                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
+                        <div class="project-overlay">
+                            <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/%20song.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>SONG</h3>
+                        <p>A simple music player project to play, pause, and enjoy your favorite songs.
+                        <p style="  color: #00a49f;">Using JS Language: Script ,audio and Option Tags </p>
+                        </p>
+                    </div>
+                </div>
+                <!-- THREE  -->
+                <div class="project-card hidden" data-category="javascript">
+                    <div class="project-img">
+                        <img src="./Assets/Images/coding.avif" alt="">
+                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
+                        <div class="project-overlay">
+                            <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/calculatorjs.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>CALCULATOR</h3>
+                        <p>A simple and efficient calculator for quick and accurate computations.
+                        <p style="  color: #00a49f;">Using JS Language: Script and Div Tags </p>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FOUR -->
+                <div class="project-card hidden" data-category="javascript">
+                    <div class="project-img">
+                        <img src="./Assets/Images/coding.avif" alt="">
+                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
+                        <div class="project-overlay">
+                            <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/oddnumber%20(1).html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>ODD AN EVEN</h3>
+                        <p>A simple tool to check whether a number is odd or even.
+                        <p style="  color: #00a49f;">Using JS Language: Script and Div Tags </p>
+                        </p>
+                    </div>
+                </div>
+                <!-- FIVE -->
+                <div class="project-card hidden" data-category="javascript">
+                    <div class="project-img">
+                        <img src="./Assets/Images/coding.avif" alt="">
+                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
+                        <div class="project-overlay">
+                            <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/hello.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>HELLO</h3>
+                        <p>A simple 'Hello World' project to kickstart your programming journey
+                        <p style="  color: #00a49f;">Using JS Language: Script and Div Tags </p>
+                        </p>
+                    </div>
+                </div>
+                <!-- SIX -->
+                <div class="project-card hidden" data-category="javascript">
+                    <div class="project-img">
+                        <img src="./Assets/Images/coding.avif" alt="">
+                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
+                        <div class="project-overlay">
+                            <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/login.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>LOGIN PAGE</h3>
+                        <p>Simple and stylish login interface for accessing your application.
+                        <p style="  color: #00a49f;">Using JS Language: Script, Input and Label Tags </p>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- SEVEN -->
+                <div class="project-card hidden" data-category="javascript">
+                    <div class="project-img">
+                        <img src="./Assets/Images/coding.avif" alt="">
+                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
+                        <div class="project-overlay">
+                            <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/lottery.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>LOTTERY</h3>
+                        <p>A fun and random number-based lottery game to test your luck.
+                        <p style="  color: #00a49f;">Using JS Language: Script and Input Tags </p>
+                        </p>
+                    </div>
+                </div>
+                <!-- eight -->
+                <div class="project-card" data-category="javascript">
+                    <div class="project-img">
+                        <img src="./Assets/Images/coding.avif" alt="">
+                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
+                        <div class="project-overlay">
+                            <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/math.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>MATH TABLE</h3>
+                        <p>A fun and random number-based lottery game to test your luck.
+                        <p style="color: #00a49f;">Using JS Language: Script and Button Tags </p>
+                        </p>
+                    </div>
+                </div>
+                <!-- NINE -->
+                <div class="project-card" data-category="javascript">
+                    <div class="project-img">
+                        <img src="./Assets/Images/coding.avif" alt="">
+                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
+                        <div class="project-overlay">
+                            <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/main.html" class="view-project">View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>CURSOR STYLE</h3>
+                        <p>A fun and random number-based lottery game to test your luck.
+                        <p style="  color: #00a49f;">Using JS Language: Script and Div Tags </p>
+                        </p>
+                    </div>
+                </div>
+                <!-- LIVE PROJECT -->
+                <!-- ONE -->
+                <div class="project-card" data-category="live-project">
+                    <div class="project-img">
+                        <img src="https://img.freepik.com/free-vector/flat-design-driving-school-template_23-2149282163.jpg" alt="">
+                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
+                        <div class="project-overlay">
+                            <a href="https://luckyfullstackdeveloper1.github.io/LuckyFullStackDeveloper1/ep%20_project/main.html" class="view-project">View Live Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>CAR PROJECT</h3>
+                        <p>A fun and random number-based lottery game to test your luck.
+                        <p style="  color: #00a49f;">Using JS Language: Script and Div Tags </p>
+                        </p>
+                    </div>
+                </div>
+                <!-- TWO -->
+                <div class="project-card" data-category="live-project">
+                    <div class="project-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf3-fP2nl4yiWIC_bkPbMjZutwLF427XcCcQ&s"
+                            alt="">
+                        <div class="project-category html-css">HTML / CSS / JavaScript</div>
+                        <div class="project-overlay">
+                            <a href="https://himanshufullstackdeveloper.github.io/ADVANCED-Institute/" class="view-project">View Live Project</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>TUTION PROJECT</h3>
+                        <p>A fun and random number-based lottery game to test your luck.
+                        <p style="  color: #00a49f;">Using JS Language: Script and Div Tags </p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- See More Button -->
+            <div class="see-more-container">
+                <button class="see-more-btn">See More Projects</button>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>CONTACT</h2>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Katol, Maharashtra, India</p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <a style="text-decoration: none;" href="mailto:nakadelucky8@gmail.com"><p>nakadelucky8@gmail.com</p></a>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="contact-text">
+                            <h4>Phone</h4>
+                            <a style="text-decoration: none;" href="tel:+919226784527"><p>+91 9226784527</p></a>
+                        </div>
+                    </div>
+                </div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3717.9540047069318!2d78.58340687549595!3d21.273288180437945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd45758875e72f5%3A0xc109bb37c5740045!2sGanesh%20Mandir!5e0!3m2!1sen!2sin!4v1743768025711!5m2!1sen!2sin"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://join.skype.com/invite/qFXuilrCltAf" class="social-link"><i
+                        class="fa-brands fa-skype"></i></a>
+                <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit"
+                    class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/LuckyFullStackDeveloper1/LuckyFullStackDeveloper1" class="social-link"><i
+                        class="fa-brands fa-github"></i></a>
+            </div>
+            <p class="copyright">© 2025 Lucky Nakade. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="./index.js"></script>
+</body>
+
+</html>
