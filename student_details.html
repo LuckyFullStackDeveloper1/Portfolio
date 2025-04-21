@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <title>student details </title>
+</head>
+<style>
+
+.ONE{
+font-family: monospace;
+font-size: larger;color: rgb(140, 34, 34);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+     background-size: cover;  background-repeat: no-repeat; background-image: url(data:image/jpeg;base64,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);
+    line-height: 1.6;
+}
+
+/* Header styles */
+.hOne {
+    text-align: center;
+    margin-top: 20px;
+    font-family: monospace;
+    font-size: 36px;
+    color: hsl(223, 92%, 57%);
+}
+
+/* Form styles */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #c41c1c;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(255, 51, 51, 0.1);
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #e80101;
+    border-radius: 4px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Table styles */
+#add-info {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#add-info th,
+#add-info td {
+    padding: 10px;
+    border: 1px solid #56a317;
+}
+
+#add-info th {
+    background-color: #f8f9fa;
+}
+
+#add-info tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#add-info tbody tr:hover {
+    background-color: #ddd;
+}</style>
+<body>
+    
+<head>
+    <!-- tittle -->
+    <title>Student informartion</title>
+
+    
+</head>
+<script>
+   let students = [];
+
+// Function to show the first page and hide the second page
+function dataFunction() {
+    document.getElementById("page-one").style.display = "block";
+    document.getElementById("show").style.display = "none";
+}
+
+// Function to show the second page and hide the first page
+function listFunction() {
+    document.getElementById("page-one").style.display = "none";
+    document.getElementById("show").style.display = "block";
+
+    // Populate student table
+    populateStudentTable();
+}
+
+// Function to input data
+function inputData() {
+    let information = {};
+    information["firstName"] = document.getElementById("first-name").value;
+    information["lastName"] = document.getElementById("last-name").value;
+    information["contactNo"] = document.getElementById("contact-no").value;
+    information["emailID"] = document.getElementById("email-id").value;
+    information["addressl1"] = document.getElementById("address-l1").value;
+    information["addressl2"] = document.getElementById("address-l2").value;
+    information["addressl3"] = document.getElementById("address-l3").value;
+    information["education"] = document.querySelector('input[name="education"]:checked') ? document.querySelector('input[name="education"]:checked').value : "";
+    students.push(information)
+        ;
+    console.log("STUDENT--", students, information);
+
+  
+    document.getElementById("student-form").reset();
+}
+
+function populateStudentTable() {
+    let tableBody = document.querySelector("#student-table tbody");
+
+    tableBody.innerHTML = "";
+
+    students.forEach((student, index) => {
+        let row = tableBody.insertRow();
+        row.classList.add("td");
+        row.innerHTML = `
+            <td class="tr">${index + 1}.</td>
+            <td class="tr">${index + 1}</td>
+            <td class="tr">${student.firstName} ${student.lastName}</td>
+            <td class="tr">${student.contactNo}</td>
+            <td class="tr">${student.age}</td>
+            <td class="tr">${student.education}</td>
+            <td class="tr">${student.emailID}</td>
+            <td class="tr">${student.addressl1}, ${student.addressl2}, ${student.addressl3}</td>
+        `;
+    });
+}
+
+window.onload = function () {
+    dataFunction();
+}
+</script>
+<body>
+    
+    <h1 class="hOne">ENJOY PROGRAMMING</h1>
+    <div id="page-One">
+        <div>
+            
+           
+            <br>
+        </div>
+        <!-- form-->
+        <form style="background-color: gray;">
+            <!-- fieldset -->
+            <fieldset>
+                <!-- legend -->
+                <br>
+                <br>
+                <legend>ENTER STUDENT DETAILS 👇🏼</legend>
+                <!-- first name -->
+                <label class="ONE" for="student">  FIRST NAME :</label>
+                <input  class="ONE" type="text" id="first-name" name="student" placeholder="Enter First Name 👍" />
+       
+                <!-- last name -->
+                <label class="ONE" for="student">LAST NAME :</label>
+                <input class="ONE" type="text" id="last-name" name="student" placeholder="Enter Last Name 👍">
+               
+                <!-- dob -->
+                <label class="ONE"   for="birthdate">DOB :</label>
+                <input  class="ONE" type="date" id="birth-date" name="birthdate" placeholder="Date Of Birth 📆">
+              
+                <!-- contact -->
+                <label class="ONE" for="cont">CONTACT NO. :</label>
+                <input class="ONE" type="number" id="contact-no" name="cont" placeholder="CONTACT NO 📞">
+                
+        
+               
+                <label class="ONE" for="address">ADDRESS : DIST : STATE</label>
+                <div class="address-container">
+                    <input  class="ONE" type="text" id="address-l" name="address" placeholder="Enter Address 🏠" required>
+                  
+                    <select id="state" name="state" required>
+                        <option class="ONE" value="Maharashtra">Maharashtra</option>
+                        <option class="ONE" value="Pune">Pune</option>
+                        <option class="ONE" value="Nashik">Nashik</option>
+                    </select>
+                
+         
+                <!-- email -->
+                <label class="ONE" for="email">EMAIL ID :</label>
+                <input class="ONE" type="email" id="email-id" name="email" placeholder="Enter Email id 📧">
+       
+                <!-- password -->
+                <label class="ONE" for="password">PASSWORD :</label>
+                <input class="ONE" type="password" name="password" placeholder="Enter Password 🎫">
+                <br><br>
+                <button class="ONE" style="margin-left: 230px;" type="submit" onclick="showFunction()"> <a href="./pageFour.html">SUBMIT</a></button>
+            </fieldset>
+        </form>
+       
+    </div>
+    <!-- list data -->
+    <div id="page-Two">
+        <div>
+            <!-- buttons -->
+         
+        
+          
+            <tbody id="create-table">
+                <tr>
+                </tr>
+            </tbody>
+           
+        
+                </tr> 
+           
+           
+                </tr> 
+            <!-- fifth row -->
+            <!-- <tr>
+                    
+        </table>
+
+    </div>
+   
+
+
+</html>
+</body>
+</html>
