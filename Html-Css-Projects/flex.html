@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        /* Styles for the main container */
+        .main {
+            height: 600px;
+            width: 700px;
+            background-color: aqua;
+            border-style: solid;
+            display: flex;
+            flex-direction: column;margin-left: 350px;
+        }
+
+        /* Styles for the first section */
+        .one {
+            height: 200px;
+            width: 700px;
+            display: flex;
+            justify-content: baseline;
+            align-items: baseline;
+            background-color: chocolate;
+        }
+
+        /* Styles for the second section */
+        .two {
+            display: flex;
+            background-color: thistle;
+            height: 400px;
+            width: 700px;
+        }
+
+        /* Styles for the sub-boxes within the second section */
+        .four {
+            display: flex;
+            justify-content: center;
+            height: 100%;
+            width: 33%;
+            background-color: lightcoral;
+        }
+
+        .box2 {
+            background-color: darkorange;
+            display: flex;
+            align-items: center;
+        }
+
+        .box3 {
+            background-color: rgb(90, 240, 73);
+            width: 34%;
+        }
+
+        .box4 {
+            background-color: violet;
+            width: 100%;
+            height: 30%;
+        }
+
+        .box5 {
+            background-color: rgb(130, 157, 238);
+            width: 100%;
+            height: 30%;
+        }
+
+        /* Styles for the second main container */
+        .main2 {
+            height: 600px;
+            width: 700px;
+            background-color: rgb(162, 162, 162);
+            border-style: solid;
+        }
+
+        /* Styles for the first section within the second main container */
+        .one2 {
+            height: 200px;
+            width: 700px;
+            display: flex;
+            justify-content: baseline;
+            align-items: baseline;
+            background-color: chocolate;
+        }
+
+        /* Styles for the second section within the second main container */
+        .two2 {
+            display: flex;
+            background-color: thistle;
+            height: 400px;
+            width: 250px;
+            align-items: center;
+        }
+
+        /* Styles for the box6 */
+        .box6 {
+            background-color: darkorange;
+            height: 400px;
+            width: 250px;
+            margin-left: 450px;
+        }
+
+        /* Styles for the box4 */
+        .box4 {
+            background-color: violet;
+            width: 100%;
+            height: 40%;
+        }
+
+        /* Styles for the box9 */
+        .box9 {
+            background-color: lightcoral;
+            height: 60%;
+            width: 30%;
+        }
+
+        /* Styles for the second section within the first main container */
+      
+        .first {
+            background-color: blue;
+            height: 200px;
+        }
+
+        .sec {
+            background-color: rgb(82, 82, 124);
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .third {
+            background-color: rgb(138, 64, 133);
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .q {
+            background-color: rgb(193, 36, 36);
+            width: 235px;
+        }
+
+        .w {
+            background-color: rgb(70, 215, 169);
+            width: 235px;
+        }
+
+        .e {
+            background-color: rgb(43, 133, 25);
+            width: 230px;
+        }
+
+        .r {
+            background-color: rgb(188, 195, 49);
+            width: 350px;
+        }
+
+        .t {
+            background-color: rgb(150, 92, 25);
+            width: 350px;
+        }
+
+        /* New color class */
+        .new-color {
+            background-color: rgb(255, 0, 0); /* Red color */
+        }
+        .main-cotainer {
+            background-color: rgb(235, 137, 9);
+            display: flex;
+            flex-direction:row;
+            height: 570px;
+            width: 700px;
+            align-items: flex-end;
+            border-style: solid;
+            margin-left: 350px;
+
+
+        }
+
+        .inner-cotainer {
+            height: 50px;
+            width: 30%;
+          
+            
+        }
+
+        .first-box {
+            background-color: rgb(0, 255, 136);
+            height: 190px;
+            width:270px
+
+        }
+
+        .second-box {
+
+            background-color: rgb(37, 115, 205);
+            height: 190px;
+            width: 270px;
+
+        }
+
+        .threerd-box {
+
+
+            background-color: rgb(255, 0, 0);
+            height: 190px;
+            width: 270px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- First Main Container -->
+    <div class="main">
+        <div class="one"></div>
+        <!-- First section -->
+        <div class="two">
+            <!-- Second section -->
+            <div class="four box1"></div>
+            <!-- Sub-box 1 -->
+            <div class="four box2">
+                <!-- Sub-box 2 -->
+                <div class="box4"></div>
+                <!-- Sub-box within Sub-box 2 -->
+            </div>
+            <div class="four box3">
+                <!-- Sub-box 3 -->
+                <div class="box5"></div>
+                <!-- Sub-box within Sub-box 3 -->
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+
+
+    <!-- Second Main Container -->
+    <div class="main">
+        <div class="first"></div>
+        <!-- First section -->
+        <div class="sec">
+            <!-- Second section -->
+            <div class="q"></div>
+            <!-- Sub-box 1 -->
+            <div class="w"></div>
+            <!-- Sub-box 2 -->
+            <div class="e"></div>
+            <!-- Sub-box 3 -->
+        </div>
+        <div class="third">
+            <!-- Third section -->
+            <div class="r"> </div>
+            <!-- Sub-box 1 -->
+            <div class="t"></div>
+            <!-- Sub-box 2 -->
+        </div>
+    </div>
+ <br>
+ <div class="main-cotainer"> 
+    <!--  -->
+    <div class="inner-cotainer first-box"></div>
+    <!--  -->
+    <div class="inner-cotainer second-box"></div>
+    <!--  -->
+    <div class="inner-cotainer threerd-box"></div>
+
+</div>
+<br>
+ <!--SECTION ONE  -->
+ <div style="display: inline-block; margin-left: 350px; border-style: solid;">
+    <!-- DIV ONE -->
+    <div style="background-color: #DF826C;width: 500px; height: 400px;"></div>
+    <!-- DIV TWO -->
+    <div style="background-color:#FFA1F5;width: 500px; height: 200px;"></div>
+</div>
+<!--SECTION TWO  -->
+<div style="display: inline-block;">
+    <!-- DIV ONE -->
+    <div style=" background-color:#EBF400 ;width: 200px; height: 190px; border-style: solid;"></div>
+    <!-- DIV TWO -->
+    <div style="background-color: #FC6736;width:200px; height: 200px;border-style: solid; "></div>
+    <!-- DIV THREE -->
+    <div style="background-color:#65B741;width: 200px; height: 200px; border-style: solid;"></div>
+
+</div>
+
+<div class="as">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+</div>
+</body>
+
+</html>

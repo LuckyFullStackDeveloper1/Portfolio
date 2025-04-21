@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MAIN❖FORM</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: monospace;
+      background: linear-gradient(to right, #ffd000, #ACE2E1, #9BCF53, #F2C18D, #ff0000);
+    }
+
+    .ms {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 30px 10px;
+      background-color: gray;
+    }
+
+    .box {
+      background-color: #FF8080;
+      border: 2px solid #000;
+      width: 250px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .box:hover {
+      background-color: #6e8b92;
+      transform: scale(1.05);
+    }
+
+    .box a {
+      text-decoration: none;
+      color: firebrick;
+      font-size: 1.2em;
+      text-align: center;
+      display: block;
+    }
+
+    .box a:hover {
+      color: darkred;
+    }
+
+    @media (max-width: 768px) {
+      .box {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ms">
+    <div class="box">
+      <a href="./applicationOff.html">Offline Form</a>
+    </div>
+
+    <div class="box">
+      <a href="./applicationOn.html">Online Form</a>
+    </div>
+
+    <div class="box">
+      <a href="./newform.html">Computer Centre</a>
+    </div>
+  </div>
+</body>
+</html>
