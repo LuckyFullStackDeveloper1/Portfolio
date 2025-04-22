@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Checker</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #c2ffd8, #ffdde1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .box {
+      background-color: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      width: 100%;
+      max-width: 500px;
+      border-style: solid;
+
+    }
+
+    #display {
+      background-color: #85b85b;
+      border: 2px solid #000000;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      min-height: 50px;
+      font-family: monospace;
+    }
+
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    input.input {
+      height: 40px;
+      padding: 10px;
+      font-size: 1rem;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .check {
+      padding: 12px;
+      font-size: 1rem;
+      background-color: #ffe100;
+      color: #d70000;
+      border: 2px solid #000000;
+      border-radius: 8px;
+      font-family: monospace;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .check:hover {
+      background-color: #fff36a;
+    }
+
+    @media (min-width: 600px) {
+      .inputs {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .input {
+        width: 48%;
+      }
+
+      .buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .check {
+        flex: 1 1 48%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+    <div id="display">Check your number!</div>
+
+    <div class="inputs">
+      <input id="one" class="input" placeholder="Enter 1st number">
+      <input id="two" class="input" placeholder="Enter 2nd number">
+    </div>
+
+    <div class="buttons">
+      <button onclick="result()" class="check">Even or Odd</button>
+      <button onclick="check()" class="check">Eligible to Vote?</button>
+      <button onclick="equal()" class="check">Equal or Not?</button>
+      <button onclick="clearFunction()" class="check">Clear</button>
+    </div>
+  </div>
+
+  <script>
+    function result() {
+      const number = document.getElementById("one").value;
+      const display = document.getElementById("display");
+
+      if (number === "") {
+        display.innerHTML = "Please enter a number!";
+        return;
+      }
+
+      display.innerHTML = number % 2 === 0 ? "This number is even." : "This number is odd.";
+    }
+
+    function check() {
+      const vote = document.getElementById("one").value;
+      const display = document.getElementById("display");
+
+      if (vote === "") {
+        display.innerHTML = "Please enter age!";
+        return;
+      }
+
+      display.innerHTML = vote >= 18 ? "✅ Eligible to vote!" : "❌ Not eligible to vote.";
+    }
+
+    function equal() {
+      const x = Number(document.getElementById("one").value);
+      const y = Number(document.getElementById("two").value);
+      const display = document.getElementById("display");
+
+      if (isNaN(x) || isNaN(y)) {
+        display.innerHTML = "Please enter valid numbers!";
+        return;
+      }
+
+      display.innerHTML = x === y ? "✔️ Numbers are equal." : "❌ Numbers are not equal.";
+    }
+
+    function clearFunction() {
+      document.getElementById("display").innerHTML = "Check your number!";
+      document.getElementById("one").value = "";
+      document.getElementById("two").value = "";
+    }
+  </script>
+
+</body>
+
+</html>

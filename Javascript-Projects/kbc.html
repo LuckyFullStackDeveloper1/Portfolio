@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>KBC USIN JS  </title>
+    <style>
+        .container {
+            width: 80vw;
+            height: 80vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 30px;
+        }
+
+        .START {
+            margin-top: 40PX;
+            border-color: blueviolet;
+            height: 0px;
+            width: 0px;
+        }
+
+
+        .display {
+            width: 100%;
+            height: 30%;
+            font-family: monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 100px;
+
+        }
+
+        .display-text {
+            color: white;
+            font-size: 22px;
+        }
+
+        .custom-button {
+            margin-top: 80px;
+            margin-left: 20%;
+            background-color: rgb(205, 195, 50);
+            color: black;
+
+            width: 30%;
+            height: 15%;
+            font-size: 18px;
+            float: left;
+            ;
+            font-family: monospace;
+            border-color: rgb(255, 0, 0);
+            border-width: 10px;
+
+        }
+
+        .input-section {
+            width: 100%;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .input-no {
+            width: 40%;
+            height: 44px;
+
+        }
+    </style>
+    <script>
+
+        let questionNumber = 0;
+        function questionOne() {
+            document.getElementById("display-text").innerHTML =
+                "1) first match of ipl in 2024   ";
+            document.getElementById("answer-one").innerHTML = " A) csk VS mi";
+            document.getElementById("answer-two").innerHTML = " B) csk vs dc";
+            document.getElementById("answer-three").innerHTML = " C) mi vs rcb ";
+            document.getElementById("answer-four").innerHTML = " D) csk vs rcb";
+
+        }
+        function questionTwo() {
+
+            document.getElementById("display-text").innerHTML =
+                " 2) The state of Odisha does not share a border with which of the following states?";
+            document.getElementById("answer-one").innerHTML = " A)  Bihar ";
+            document.getElementById("answer-two").innerHTML = " B)Chhattisgarh";
+            document.getElementById("answer-three").innerHTML = " C)  Andhra Pradesh";
+            document.getElementById("answer-four").innerHTML = "D) Jharkhand";
+
+        }
+        function questionThree() {
+            document.getElementById("display-text").innerHTML =
+                "3) Which James Bond movie was shot  the Indian city  Udaipur? ";
+
+            document.getElementById("answer-one").innerHTML = " A)Diamonds Are Forever ";
+            document.getElementById("answer-two").innerHTML = " B)License to Kill ";
+            document.getElementById("answer-three").innerHTML = " C) Live and Let Die";
+            document.getElementById("answer-four").innerHTML = "D) Octopussy  ";
+        }
+        function questionFour() {
+            document.getElementById("display-text").innerHTML =
+                "4) The International Literacy Day is observed on?";
+
+            document.getElementById("answer-one").innerHTML = " A)Sep 8 ";
+            document.getElementById("answer-two").innerHTML = " B)Nov 28 ";
+            document.getElementById("answer-three").innerHTML = " C)May 2 ";
+            document.getElementById("answer-four").innerHTML = "D)Sep 22  ";
+        }
+        function questionFive() {
+            document.getElementById("display-text").innerHTML =
+                "5) संपत पाल देवी ने बुंदेलखंड में महिलाओं के खिलाफ होने वाली हिंसा को रोकने के लिए किस दल की स्थापना की थी?";
+
+            document.getElementById("answer-one").innerHTML = " A)लक्ष्मीबाई सेना ";
+            document.getElementById("answer-two").innerHTML = " B)गुलाबी गैंग";
+            document.getElementById("answer-three").innerHTML = " C)नारी मुक्ति वाहिनी ";
+            document.getElementById("answer-four").innerHTML = "D) महिला मोर्चा  ";
+        }
+        function questionSix() {
+            document.getElementById("display-text").innerHTML =
+                "6) In which year was the first ever IPL match played?";
+
+            document.getElementById("answer-one").innerHTML = " A) 2009";
+            document.getElementById("answer-two").innerHTML = " B)2006";
+            document.getElementById("answer-three").innerHTML = " C)2008 ";
+            document.getElementById("answer-four").innerHTML = "D) 2007  ";
+        }
+        function questionSeven() {
+            document.getElementById("display-text").innerHTML =
+                "7) Which edition is Indian Premier League (IPL) 2023?";
+
+            document.getElementById("answer-one").innerHTML = " A) 13th ";
+            document.getElementById("answer-two").innerHTML = " B) 14th";
+            document.getElementById("answer-three").innerHTML = "C) 15th ";
+            document.getElementById("answer-four").innerHTML = "D) 16th  ";
+
+          
+        }
+        function questionEight() {
+            document.getElementById("display-text").innerHTML =
+                "8)  Who was the Man of the Match in the IPL 2022 final?";
+
+            document.getElementById("answer-one").innerHTML = " A) Rashid Khan ";
+            document.getElementById("answer-two").innerHTML = " B) Hardik Pandya";
+            document.getElementById("answer-three").innerHTML = "C) Shubman Gill ";
+            document.getElementById("answer-four").innerHTML = "D) David Miller  ";
+        }
+        function questionNine() {
+            document.getElementById("display-text").innerHTML =
+                "9) Which two teams lost the most games in IPL 2022?  ";
+
+            document.getElementById("answer-one").innerHTML = " A)  MI, CSK ";
+            document.getElementById("answer-two").innerHTML = " B) MI, SRH ";
+            document.getElementById("answer-three").innerHTML = "C) CSK, SRH ";
+            document.getElementById("answer-four").innerHTML = "D) KKR, CSK  ";
+        }
+        // 
+        function questionTan() {
+            document.getElementById("display-text").innerHTML =
+                "10) India is a federal union comprising twenty-eight states and how many union territories?";
+            document.getElementById("answer-one").innerHTML = " A) 6  ";
+            document.getElementById("answer-two").innerHTML = " B) 7 ";
+            document.getElementById("answer-three").innerHTML = "C) 8 ";
+            document.getElementById("answer-four").innerHTML = "D) 9  ";
+        }
+        function question11() {
+            document.getElementById("display-text").innerHTML =
+                "11) Which of the following is the capital of Arunachal Pradesh?";
+            document.getElementById("answer-one").innerHTML = " A) Itanagar ";
+            document.getElementById("answer-two").innerHTML = " B)  Dispur";
+            document.getElementById("answer-three").innerHTML = "C) Imphal  ";
+            document.getElementById("answer-four").innerHTML = "D)  Panaji ";
+        }
+        function question12() {
+            document.getElementById("display-text").innerHTML =
+                "12)  What are the major languages spoken in Andhra Pradesh?";
+            document.getElementById("answer-one").innerHTML = " A) Odia and Telugu ";
+            document.getElementById("answer-two").innerHTML = " B) Telugu and Urdu or hindi";
+            document.getElementById("answer-three").innerHTML ="C) Telugu and Kannada ";
+            document.getElementById("answer-four").innerHTML = "D)  All of the above languages ";
+        }
+       
+        
+        function question(question) {
+            document.getElementById("container").style.backgroundColor = "#124076";
+            let audio = new Audio("./tyar.m4a");
+            if (question == 1) {
+                questionNumber = 1;
+                questionOne();
+                audio.play();
+
+            } else if (question == 2) {
+                questionNumber = 2;
+                questionTwo();
+                audio.play();
+
+            } else if (question == 3) {
+                questionNumber = 3;
+                questionThree();
+                audio.play();
+
+            } else if (question == 4) {
+                questionNumber = 4;
+                questionFour();
+                audio.play();
+
+            } else if (question == 5) {
+                questionNumber = 5;
+                questionFive();
+                audio.play();
+
+            } else if (question == 6) {
+                questionNumber = 6;
+                questionSix();
+                audio.play();
+
+            } else if (question == 7) {
+                questionNumber = 7;
+                questionSeven();
+                audio.play();
+
+            } else if (question == 8) {
+                questionNumber = 8;
+                questionEight();
+                audio.play();
+
+            } else if (question == 9) {
+                questionNumber = 9;
+                questionNine();
+                audio.play();
+// 
+            } else if (question == 10) {
+                questionNumber = 10;
+                questionTan();
+                audio.play();
+            } 
+            
+            else if (question == 11) {
+                questionNumber = 11;
+                question11();
+                audio.play();
+            } 
+               
+            else if (question == 12) {
+                questionNumber = 12;
+                question12();
+                audio.play();
+            }
+            
+            else {
+                document.getElementById("display-text").innerHTML =
+                    "";
+            }
+        }
+
+        function answer(givenAnswer) {
+            let ned = new Audio("./image_project/shi j.m4a");
+            if (questionNumber == 1) {
+                if (givenAnswer == 4) {
+                    answerOne(true, 2);
+                    ned.play();
+                } else {
+                    let xyz = new Audio("./image_project/glate.m4a");
+                    answerOne(false, 0);
+                    xyz.play();
+                }
+            } if (questionNumber == 2) {
+                if (givenAnswer == 1) {
+                    answerOne(true, 3);
+                    ned.play();
+                } else {
+                    let xyz = new Audio("./image_project/glate.m4a");
+                    answerOne(false, 0);
+                    xyz.play();
+                }
+            }
+            if (questionNumber == 3) {
+                if (givenAnswer == 3) {
+                    answerOne(true, 4);
+                    ned.play();
+                } else {
+                    let xyz = new Audio("./image_project/glate.m4a");
+                    answerOne(false, 0);
+                    xyz.play();
+                }
+            }
+            if (questionNumber == 4) {
+                if (givenAnswer == 1) {
+                    answerOne(true, 5);
+                    ned.play();
+                } else {
+                    let xyz = new Audio("./image_project/glate.m4a");
+                    answerOne(false, 0);
+                    xyz.play();
+                }
+            }
+            if (questionNumber == 5) {
+                if (givenAnswer == 2) {
+                    answerOne(true, 6);
+                    ned.play();
+                } else {
+                    let xyz = new Audio("./image_project/glate.m4a");
+                    answerOne(false, 0);
+                    xyz.play();
+                }
+            }
+            if (questionNumber == 6) {
+                if (givenAnswer == 4) {
+                    answerOne(true, 7);
+                    ned.play();
+                } else {
+                    let xyz = new Audio("./image_project/glate.m4a");
+                    answerOne(false, 0);
+                    xyz.play();
+                }
+            }
+            if (questionNumber == 7) {
+                if (givenAnswer == 4) {
+                    answerOne(true, 8);
+                    ned.play();
+                } else {
+                    let xyz = new Audio("./image_project/glate.m4a");
+                    answerOne(false, 0);
+                    xyz.play();
+                }
+            }
+            if (questionNumber == 8) {
+                if (givenAnswer == 2) {
+                    answerOne(true, 9);
+                    ned.play();
+                } else {
+                    let xyz = new Audio("./image_project/glate.m4a");
+                    answerOne(false, 0);
+                    xyz.play();
+                }
+            }
+            // 
+            if (questionNumber == 9) {
+                if (givenAnswer == 1) {
+                    answerOne(true, 10);
+                    ned.play();
+                } else {
+                    let xyz = new Audio("./image_project/glate.m4a");
+                    answerOne(false, 0);
+                    xyz.play();
+                }
+            }
+           
+            if (questionNumber == 10) {
+                if (givenAnswer == 3) {
+                    answerOne(true, 11);
+                    ned.play();
+                } else {
+                    let xyz = new Audio("./image_project/glate.m4a");
+                    answerOne(false, 0);
+                    xyz.play();
+                }
+            }
+            if (questionNumber == 11) {
+                if (givenAnswer == 1) {
+                    answerOne(true, 12);
+                    ned.play();
+                } else {
+                    let xyz = new Audio("./image_project/glate.m4a");
+                    answerOne(false, 0);
+                    xyz.play();
+                }
+            }
+            if (questionNumber == 12) {
+                if (givenAnswer == 2) {
+                    answerOne(true, 13);
+                    ned.play();
+                } else {
+                    let xyz = new Audio("./image_project/glate.m4a");
+                    answerOne(false, 0);
+                    xyz.play();
+                }
+            }
+
+
+            }
+        
+
+
+        function answerOne(correctAnswer, nextQuestion) {
+            if (correctAnswer) {
+                document.getElementById("display-text").innerHTML =
+                    "Sahi Jabab ✅  ";
+                document.getElementById("container").style.backgroundColor =
+                    "#26BE32";
+                setTimeout(() => {
+                    question(nextQuestion);
+                }, 1000);
+            } else {
+                document.getElementById("display-text").innerHTML =
+                    " Galat Jawab ❎";
+                document.getElementById("container").style.backgroundColor =
+                    "#FF0000";
+                setTimeout(() => {
+                    startScreen();
+                }, 1000);
+            }
+        }
+
+        function dostart() {
+            document.getElementById("main-body").hidden = false;
+            document.getElementById("play-button").hidden = true;
+            question(1);
+        }
+
+        function startScreen() {
+            document.getElementById("main-body").hidden = true;
+            document.getElementById("play-button").hidden = false;
+        }
+
+
+    </script>
+</head>
+
+<body
+    style="background-repeat: no-repeat;background-size: cover;  background-image: url(https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2020/09/kbc-12-1600427624.jpg);">
+    <button class="START" id="play-button" onclick="dostart()"> <img style="height: 80px; width: 310px; "
+            src="./my_image/play.kbc.png"></button>
+
+
+    <div class="container" id="main-body" hidden="true">
+        <div class="display" id="container">
+            <h1 id="display-text" class="display-text"></h1>
+        </div>
+        <button class="custom-button" id="answer-one" onclick="answer(1)"></button>
+        <button class="custom-button" id="answer-two" onclick="answer(2)"></button>
+        <button class="custom-button" id="answer-three" onclick="answer(3)"></button>
+        <button class="custom-button" id="answer-four" onclick="answer(4)"></button>
+
+
+    </div>
+
+</body>
+
+</html>

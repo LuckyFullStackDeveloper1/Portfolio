@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Music Player</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('../my_image/BBBB.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .player-container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .track-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .controls button {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      font-size: 20px;
+      color: #000000;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    .controls button:hover {
+      transform: scale(1.1);
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .volume-slider {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #000000;
+    }
+
+    .volume-slider input[type="range"] {
+      flex: 1;
+      accent-color: rgb(0, 0, 0);
+    }
+
+    @media (max-width: 500px) {
+      .controls button {
+        width: 50px;
+        height: 50px;
+        font-size: 16px;
+      }
+
+      .track-title {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <audio id="myAudio"></audio>
+
+  <div class="player-container">
+    <div class="track-title" id="trackTitle">🎵 Now Playing: Silsila Ye Chahat Ka</div>
+
+    <div class="controls">
+      <button onclick="previousAudio()">⏮️</button>
+      <button onclick="playAudio()">▶️</button>
+      <button onclick="pauseAudio()">⏸️</button>
+      <button onclick="nextSong()">⏭️</button>
+    </div>
+
+    <div class="volume-slider">
+      <span>🔊</span>
+      <input type="range" id="volumeRange" min="0" max="1" step="0.1" value="1" onchange="changeVolume(this.value)">
+    </div>
+  </div>
+
+  <script>
+    const audio = document.getElementById("myAudio");
+    const trackTitle = document.getElementById("trackTitle");
+
+    let songs = [
+      { title: "Silsila Ye Chahat Ka", file: "image_project/Silsila Ye Chahat Ka - Remix-(PagalSongs.Com.IN).mp3" },
+      { title: "Game - Sidhu Moose Wala", file: "image_project/Game - Sidhu Moose Wala (1).mp3" },
+      { title: "Besharam Bewaffa", file: "image_project/Besharam Bewaffa 128 Kbps.mp3" },
+      { title: "Main Rang Sharbaton Ka", file: "image_project/128-Main Rang Sharbaton Ka - Phata Poster Nikhla Hero 128 Kbps.mp3" },
+      { title: "Tu Hai Kahan", file: "image_project/Tu Hai Kahan(PagalWorld.com.pe).mp3" }
+    ];
+
+    let currentSongIndex = 0;
+    audio.src = songs[currentSongIndex].file;
+    updateTrackTitle();
+
+    function updateTrackTitle() {
+      trackTitle.textContent = "🎵 Now Playing: " + songs[currentSongIndex].title;
+    }
+
+    function playAudio() {
+      audio.play();
+    }
+
+    function pauseAudio() {
+      audio.pause();
+    }
+
+    function nextSong() {
+      currentSongIndex = (currentSongIndex + 1) % songs.length;
+      audio.src = songs[currentSongIndex].file;
+      updateTrackTitle();
+      audio.play();
+    }
+
+    function previousAudio() {
+      currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+      audio.src = songs[currentSongIndex].file;
+      updateTrackTitle();
+      audio.play();
+    }
+
+    function changeVolume(val) {
+      audio.volume = val;
+    }
+  </script>
+
+</body>
+
+</html>

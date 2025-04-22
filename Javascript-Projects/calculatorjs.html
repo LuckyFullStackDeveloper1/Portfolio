@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .main {
+      width: 360px;
+      background-color: #21211f;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    #display {
+      background-color: rgb(255, 225, 107);
+      height: 60px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      text-align: right;
+      padding: 10px;
+      font-size: 24px;
+    }
+
+    button {
+      background-color: #ffc800;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      width: 100%;
+      height: 100%;
+      color: rgb(255, 244, 244);
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #e0a800;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .row button {
+      flex: 1;
+      margin: 5px;
+    }
+
+    .button-color-one {
+      background-color: #5b5e67;
+      color: white;
+    }
+
+    .button-special {
+      background-color: #ff6b6b;
+      color: white;
+    }
+
+    .button-wide {
+      flex: 2;
+    }
+
+    /* Responsive design */
+    @media screen and (max-width: 768px) {
+      .main {
+        width: 90vw;
+      }
+
+      button {
+        font-size: 16px;
+      }
+
+      #display {
+        font-size: 20px;
+      }
+    }
+  </style>
+  <script>
+    let total = 0;
+    let displayString = "";
+    let action = 0;
+
+    function showresult() {
+      if (action == 1) {
+        total = total + Number(displayString);
+      } else if (action == 2) {
+        total = total % Number(displayString);
+      } else if (action == 3) {
+        total = total / Number(displayString);
+      } else if (action == 4) {
+        total = total - Number(displayString);
+      } else if (action == 5) {
+        total = total * Number(displayString);
+      }
+      displayString = total;
+      document.getElementById("display").innerHTML = displayString;
+    }
+
+    function clearFunction() {
+      total = 0;
+      displayString = "";
+      document.getElementById("display").innerHTML = "";
+    }
+
+    function numbertype(passnumber) {
+      displayString += passnumber.toString();
+      document.getElementById("display").innerHTML = displayString;
+    }
+
+    function add() {
+      total = Number(displayString);
+      displayString = "";
+      action = 1;
+      document.getElementById("display").innerHTML = displayString;
+    }
+
+    function percent() {
+      total = Number(displayString);
+      displayString = "";
+      action = 2;
+      document.getElementById("display").innerHTML = displayString;
+    }
+
+    function division() {
+      total = Number(displayString);
+      displayString = "";
+      action = 3;
+      document.getElementById("display").innerHTML = displayString;
+    }
+
+    function sub() {
+      total = Number(displayString);
+      displayString = "";
+      action = 4;
+      document.getElementById("display").innerHTML = displayString;
+    }
+
+    function multiply() {
+      total = Number(displayString);
+      displayString = "";
+      action = 5;
+      document.getElementById("display").innerHTML = displayString;
+    }
+  </script>
+</head>
+
+<body>
+  <div class="main">
+    <div id="display"></div>
+    <div class="row">
+      <button class="button-special" onclick="clearFunction()">CLEAR</button>
+      <button onclick="showresult()">=</button>
+      <button onclick="percent()">%</button>
+    </div>
+    <div class="row">
+      <button class="button-color-one" onclick="numbertype(7)">7</button>
+      <button class="button-color-one" onclick="numbertype(8)">8</button>
+      <button class="button-color-one" onclick="numbertype(9)">9</button>
+      <button onclick="sub()">-</button>
+    </div>
+    <div class="row">
+      <button class="button-color-one" onclick="numbertype(6)">6</button>
+      <button class="button-color-one" onclick="numbertype(5)">5</button>
+      <button class="button-color-one" onclick="numbertype(4)">4</button>
+      <button onclick="division()">/</button>
+    </div>
+    <div class="row">
+      <button class="button-color-one" onclick="numbertype(3)">3</button>
+      <button class="button-color-one" onclick="numbertype(2)">2</button>
+      <button class="button-color-one" onclick="numbertype(1)">1</button>
+      <button onclick="add()">+</button>
+    </div>
+    <div class="row">
+      <button class="button-color-one" onclick="numbertype(0)">0</button>
+      <button class="button-color-one button-wide" onclick="numbertype('00')">00</button>
+      <button class="button-color-one" onclick="numbertype('.')">.</button>
+      <button onclick="multiply()">*</button>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main-index.css">
+    <title>Car Information</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.5s ease;
+        }
+
+        header {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header nav a {
+            color: #ecf0f1;
+            margin: 0 15px;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        header nav a:hover {
+            background-color: #34495e;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .car-details {
+            display: flex;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .car-image img {
+            height: 400px;
+            max-width: 700px;
+            border-radius: 10px 0 0 10px;
+            border-radius: 10%;
+            cursor: pointer;
+        }
+
+        .car-info {
+            width: 910px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            background-color: #28a745;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .car-specifications,
+        .car-features {
+            margin-top: 20px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        ul li:before {
+            content: '✔';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .car-image {
+            height: 300px;
+            width: 400px;
+        }
+
+        .color-buttons {
+            margin-top: 20px;
+        }
+
+        .color-buttons button {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Car Information</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="http://enjoyprograming.com/">Enjoy Programming website</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="car-details">
+            <div class="car-info">
+                <div class="">
+                    <h2> Rolls-Royce</h2>
+                    <p><strong>Price:</strong> 9.50 Cr</p>
+                    <p><strong>Type:</strong> AWD </p>
+                    <p><strong>Color:</strong> Maltipal Color</p>
+                    <p><strong>Engine:</strong> B6749 cc </p>
+                    <p><strong>Top Speed:</strong> 250 kmph </p>
+                    <p><strong>Seating Capacity:</strong> 4</p>
+
+                    <section class="color-buttons">
+                        <button
+                            style="background-color: rgb(214, 207, 207); color: rgb(234, 234, 234); background-color: rgb(16, 15, 15); border-radius: 40%;font-size: 90%;"
+                            onclick="changeCarImageByColor('Black')">Black</button>
+                        <button
+                            style="background-color: rgb(230, 210, 210); color: rgb(255, 255, 255);  background-color: #b693cb; border-radius: 40%; font-size: 90%;"
+                            onclick="changeCarImageByColor('Purple')"> Purple</button>
+                        <button
+                            style="background-color: rgb(99, 68, 68); background-color: #b2b744;  border-radius: 40%;font-size: 90%;"
+                            onclick="changeCarImageByColor('Gold')">
+                            Gold</button> <button
+                            style="background-color: rgb(1, 1, 1); background-color: #255F38; border-radius: 40%;font-size: 90%;"
+                            onclick="changeCarImageByColor('Emerald')">
+                            Emerald</button>
+                        <button
+                            style="background-color: rgb(1, 1, 1); background-color: #205781; border-radius: 40%;font-size: 90%;"
+                            onclick="changeCarImageByColor('Sapphire')">
+                            Sapphire </button>
+                    </section>
+                </div>
+
+                <div class="car-image">
+                    <img id="car-img" src="./image_amezoon/Rolls-Royce-image/black.jpeg" alt="Mahindra XUV 3XO">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="car-specifications">
+            <h3>Specifications</h3>
+            <ul>
+                <li><strong>Fuel Type:</strong> Petrol</li>
+                <li><strong>Fuel Tank Capacity:</strong> 74 Litres</li>
+                <li><strong>City Mileage:</strong> 12.1 kmpl</li>
+                <li><strong>Transmission Type:</strong> Automatic</li>
+            </ul>
+        </section>
+
+        <section class="car-features">
+            <h3>Features</h3>
+            <ul>
+                <li>Power Steering</li>
+                <li> Anti-lock Braking System (ABS)</li>
+                <li>Driver Airbag</li>
+                <li>Power Windows Front</li>
+                <li>Air Conditioner</li>
+                <li>Sunroof</li>
+                <li>Alloy Wheels</li>
+                <li>Parking Sensors</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Car Dealership. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const carImages = {
+            Black: "image_amezoon/Rolls-Royce-image/black.jpeg",
+            Purple: "image_amezoon/Rolls-Royce-image/ Purple.jpeg",
+            Gold: "image_amezoon/Rolls-Royce-image/Petra Gold.jpeg",
+            Emerald: "image_amezoon/Rolls-Royce-image/Dark Emerald.jpeg",
+            Sapphire: "image_amezoon/Rolls-Royce-image/Sapphire.jpeg",
+            Smokey: "image_amezoon/Rolls-Royce-image/Smokey.jpeg",
+        };
+
+        function changeCarImageByColor(color) {
+            document.getElementById("car-img").src = carImages[color];
+        }
+    </script>
+</body>
+
+</html>

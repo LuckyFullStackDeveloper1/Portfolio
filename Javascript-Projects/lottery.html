@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lottery Game</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #e0eafc, #cfdef3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .main-container {
+      background-color: #fff;
+      width: 100%;
+      max-width: 500px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      border-style: solid;
+ 
+
+    }
+
+    .display {
+      background-color: #6a99a8;
+      padding: 20px;
+      border-radius: 12px;
+      min-height: 120px;
+      text-align: center;
+      position: relative;
+     
+    }
+
+    .display-text {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .input-box {
+      height: 45px;
+      padding: 10px;
+      font-size: 1rem;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      width: 100%;
+    }
+
+    .button {
+      background-color: #4caf50;
+      color: white;
+      font-size: 1rem;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+
+    .loader {
+      border: 6px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 6px solid #3498db;
+      width: 60px;
+      height: 60px;
+      animation: spin 1.2s linear infinite;
+      position: absolute;
+      top: calc(50% - 30px);
+      left: calc(50% - 30px);
+      display: none;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @media (max-width: 500px) {
+      .main-container {
+        padding: 16px;
+      }
+
+      .input-box {
+        font-size: 0.95rem;
+      }
+
+      .button {
+        font-size: 0.95rem;
+      }
+
+      .display-text {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="display" id="display">
+      <h2 class="display-text" id="display-text">Loading...</h2>
+      <div id="loader" class="loader"></div>
+    </div>
+
+    <div class="input-container">
+      <input id="input" type="number" class="input-box" placeholder="Enter a Number (0–9)" />
+      <input id="coins" type="number" class="input-box" placeholder="Enter Coins to Bet" />
+      <button class="button" onclick="startPlay()"> Try Your Luck</button>
+    </div>
+  </div>
+
+  <script>
+    let coins = 100;
+
+    function startPlay() {
+      const loader = document.getElementById("loader");
+      const displayText = document.getElementById("display-text");
+      loader.style.display = "block";
+      displayText.textContent = "";
+
+      setTimeout(() => {
+        loader.style.display = "none";
+        startLottery();
+      }, 1000);
+    }
+
+    function startLottery() {
+      const betCoins = parseInt(document.getElementById("coins").value);
+      const betNumber = parseInt(document.getElementById("input").value);
+      const displayText = document.getElementById("display-text");
+
+      if (isNaN(betCoins) || isNaN(betNumber)) {
+        displayText.innerHTML = "⚠️ Please enter valid numbers.";
+        return;
+      }
+
+      if (betCoins <= 0 || betNumber < 0 || betNumber > 9) {
+        displayText.innerHTML = "⚠️ Invalid input. Bet number must be 0–9.";
+        return;
+      }
+
+      if (betCoins > coins) {
+        displayText.innerHTML = "💰 You don't have enough coins!";
+        return;
+      }
+
+      const output = Math.floor(Math.random() * 10);
+
+      if (betNumber === output) {
+        coins += betCoins * 9;
+        displayText.innerHTML = `🎉 Jackpot! You won!<br>Lottery Number: ${output}<br>Your Coins: ${coins}`;
+      } else {
+        coins -= betCoins;
+        displayText.innerHTML = `😢 Try Again!<br>Lottery Number: ${output}<br>Your Coins: ${coins}`;
+      }
+
+      displayText.style.color = "#444";
+    }
+
+    window.onload = function () {
+      startPlay();
+    };
+  </script>
+</body>
+
+</html>
