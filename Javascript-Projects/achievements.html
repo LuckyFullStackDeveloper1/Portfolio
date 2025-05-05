@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Achievements</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 50px;
+            position: relative;
+            color: #333;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #4a6fdc;
+        }
+        
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .achievement-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .achievement-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .certificate-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+            display: block;
+        }
+        
+        .certificate-info {
+            padding: 20px;
+        }
+        
+        .certificate-title {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .certificate-issuer {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .certificate-date {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 15px;
+        }
+        
+        .certificate-description {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .view-certificate {
+            display: inline-block;
+            padding: 8px 20px;
+            background: #4a6fdc;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.3s ease;
+        }
+        
+        .view-certificate:hover {
+            background: #3a5cbc;
+        }
+        
+        .upload-container {
+            margin-top: 50px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .upload-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .upload-form {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-label {
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+        }
+        
+        .form-input {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        .form-textarea {
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .file-upload {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        
+        .file-upload-input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        
+        .file-upload-label {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #f0f0f0;
+            border: 1px dashed #ccc;
+            border-radius: 4px;
+            text-align: center;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .file-upload-label:hover {
+            background: #e8e8e8;
+        }
+        
+        .submit-btn {
+            padding: 12px 25px;
+            background: #4a6fdc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background: #3a5cbc;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .achievements-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+            
+            .section-title {
+                font-size: 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .certificate-image {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="section-title"> Add The Information And Create A Certificate</h1>
+        
+        <div class="achievements-grid">
+            <!-- Example Certificate Card -->
+            <div class="achievement-card">
+                <img src="../Assets/Images/lucky-level1.jpeg" alt="Certificate" class="certificate-image">
+                <div class="certificate-info">
+                    <h3 class="certificate-title"> FullStackDeveloper Certificate  </h3>
+                    <p class="certificate-issuer">Issued by: Enjoyprograming</p>
+                    <p class="certificate-date">Completed: March 2024</p>
+                    <p class="certificate-description">Comprehensive web development program covering HTML, CSS, JavaScript, and responsive design principles.</p>
+                    <a href="#" class="view-certificate">View Certificate</a>
+                </div>
+            </div>
+            
+          
+            
+            <!-- Add more certificate cards as needed -->
+        </div>
+        
+        <!-- Upload New Certificate Section -->
+        <div class="upload-container">
+            <h2 class="upload-title">Add New Certificate</h2>
+            <form class="upload-form" id="certificateForm">
+                <div class="form-group">
+                    <label for="certTitle" class="form-label">Certificate Title</label>
+                    <input type="text" id="certTitle" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="certIssuer" class="form-label">Issuing Organization</label>
+                    <input type="text" id="certIssuer" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="certDate" class="form-label">Completion Date</label>
+                    <input type="date" id="certDate" class="form-input" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="certDesc" class="form-label">Description</label>
+                    <textarea id="certDesc" class="form-textarea" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label">Certificate Image</label>
+                    <div class="file-upload">
+                        <label for="certImage" class="file-upload-label">
+                            <span id="fileName">Choose a file</span>
+                        </label>
+                        <input type="file" id="certImage" class="file-upload-input" accept="image/*" required>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">Add Certificate</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Display file name when selected
+        document.getElementById('certImage').addEventListener('change', function() {
+            const fileName = this.files[0].name;
+            document.getElementById('fileName').textContent = fileName;
+        });
+
+        // Form submission
+        document.getElementById('certificateForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const title = document.getElementById('certTitle').value;
+            const issuer = document.getElementById('certIssuer').value;
+            const date = document.getElementById('certDate').value;
+            const description = document.getElementById('certDesc').value;
+            const imageFile = document.getElementById('certImage').files[0];
+            
+            if (!imageFile) {
+                alert('Please select a certificate image');
+                return;
+            }
+            
+            // Create a new certificate card
+            const newCertificate = createCertificateCard(title, issuer, date, description, imageFile);
+            
+            // Add the new certificate to the grid
+            document.querySelector('.achievements-grid').appendChild(newCertificate);
+            
+            // Reset the form
+            this.reset();
+            document.getElementById('fileName').textContent = 'Choose a file';
+            
+            alert('Certificate added successfully!');
+        });
+
+        // Function to create a new certificate card
+        function createCertificateCard(title, issuer, date, description, imageFile) {
+            const card = document.createElement('div');
+            card.className = 'achievement-card';
+            
+            const imageUrl = URL.createObjectURL(imageFile);
+            
+            const formattedDate = new Date(date).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long'
+            });
+            
+            card.innerHTML = `
+                <img src="${imageUrl}" alt="${title}" class="certificate-image">
+                <div class="certificate-info">
+                    <h3 class="certificate-title">${title}</h3>
+                    <p class="certificate-issuer">Issued by: ${issuer}</p>
+                    <p class="certificate-date">Completed: ${formattedDate}</p>
+                    <p class="certificate-description">${description}</p>
+                    <a href="${imageUrl}" class="view-certificate" target="_blank">View Certificate</a>
+                </div>
+            `;
+            
+            return card;
+        }
+    </script>
+</body>
+</html>
